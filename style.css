@@ -1,15 +1,15 @@
 header{
-    color: whitesmoke;
     font-size: 2vw;
 }
 body{
     background-color: #1e1e1e;
 }
-main,header{
+main,header,footer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: whitesmoke;
 }
 .button{
     background-color: transparent;
@@ -23,7 +23,6 @@ main,header{
     transform: scale(1.2);
 }
 .passwordDiv{
-    color: whitesmoke;
     font-size: 2vw;
     display: flex;
     align-items: center;
@@ -35,7 +34,7 @@ input{
     height: 1vw;
 }
 .slider{
-    -webkit-appearance: none;
+    appearance: none;
     width: 15vw;
     height: 0.1vw;
     background: #efeeed;
