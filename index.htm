@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Gerador de senha</title>
+</head>
+<body>
+    <header>
+        <h1>Gerador de Senha</h1>
+    </header>
+    <main>
+        <div id="sliderDiv" class="sliderDiv">
+            <input type="range" value="16" min="1" max="25" class="slider" oninput="this.nextElementSibling.value = this.value" id="slider">
+            <output id="output">16</output>
+        </div>
+        <button id="btnPassword" class="button">Gerar Senha</button>
+        <div id="passwordDiv" class="passwordDiv"><p id="password"></p></div>
+    </main>
+</body>
+<script src="./script.js"></script>
+</html>
