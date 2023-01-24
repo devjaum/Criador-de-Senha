@@ -18,6 +18,7 @@ class PasswordGenerator {
             filteredChars = e.key;
             this.updateForbiddenChars(filteredChars);
         })
+        this.password.addEventListener('click', this.copyPassword.bind(this));
 
 
     }
@@ -26,6 +27,7 @@ class PasswordGenerator {
     generatePassword() {
         // Atualiza o conteúdo do elemento password com a nova senha gerada
         this.password.innerText = this.generationRandomPassword(this.slider.value);
+        document.getElementById('copyPassword').classList.add("disabled")
     }
 
     // Declaração da função para gerar uma senha aleatória
@@ -70,6 +72,16 @@ class PasswordGenerator {
         }
     }
 
+    //Declaração da função para copiar a senha gerada para area de transferencia 
+    copyPassword(){
+        let copyPassword = document.getElementById('copyPassword');
+        const password = this.password.innerHTML        
+        navigator.clipboard.writeText(password).then(()=>{
+            copyPassword.innerText = "Senha copiada";
+            copyPassword.classList.remove("disabled")
+        })
+
+    }
 }
 
 let passwordGenerator = new PasswordGenerator();

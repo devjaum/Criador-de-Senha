@@ -1,8 +1,14 @@
 header{
-    font-size: 2vw;
+    font-size: 100%;
 }
 body{
     background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    
 }
 main,header,footer{
     display: flex;
@@ -14,34 +20,33 @@ main,header,footer{
 .button{
     background-color: transparent;
     border: 0.1vw solid white;
-    padding: 1vw;
+    padding: 2%;
     color: whitesmoke;
-    font-size: 1vw;
-    margin: 1vw;
+    font-size: 150%;
+    margin: 1%;
 }
 .button:hover{
     transform: scale(1.2);
 }
 .passwordDiv{
-    font-size: 2vw;
+    font-size: 130%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 input{
-    padding: 0.3vw;
-    width: 20vw;
-    height: 1vw;
+    max-width: 20vw;
+    min-width: 10vw;
 }
 .slider{
     appearance: none;
-    width: 15vw;
-    height: 0.1vw;
-    background: #efeeed;
+    width: 40vh;
+    height: 1.5vh;
+    background: white;
     border-radius: 1vw;
-    opacity: 1;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 .slider:hover{
     opacity: 0.5;
@@ -49,8 +54,8 @@ input{
 .slider::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
-    width: 2vw;
-    height: 2vw;
+    width: 3vh;
+    height: 3vh;
     border-radius: 50%;
     background: #5f5f5f;
     cursor: pointer;
@@ -66,4 +71,10 @@ output{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+#copyPassword{
+    color: #aeecb8 !important
+}
+.disabled{
+    display: none;
 }
